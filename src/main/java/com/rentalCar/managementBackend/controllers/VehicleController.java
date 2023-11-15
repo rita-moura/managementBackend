@@ -14,6 +14,13 @@ import com.rentalCar.managementBackend.services.VehicleService;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.websocket.server.PathParam;
 
+import com.rentalCar.managementBackend.entitys.VehicleEntity;
+import com.rentalCar.managementBackend.services.VehicleService;
+
+import io.swagger.v3.oas.annotations.Operation;
+import jakarta.websocket.server.PathParam;
+
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("vehicles")
 public class VehicleController {
