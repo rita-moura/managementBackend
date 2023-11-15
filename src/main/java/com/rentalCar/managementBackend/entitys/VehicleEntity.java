@@ -1,10 +1,6 @@
 package com.rentalCar.managementBackend.entitys;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -34,4 +30,10 @@ public class VehicleEntity {
     @Column(name = "year")
     private Integer year;
 
+    @Column(name = "is_reserved")
+    private boolean reserved;
+
+    public boolean getReserved() {
+        return this.reserved;
+    }
 }
