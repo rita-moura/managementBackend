@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import com.rentalCar.managementBackend.entitys.VehicleEntity;
 import com.rentalCar.managementBackend.repositorys.VehicleRepository;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class VehicleService {
@@ -15,6 +16,10 @@ public class VehicleService {
 
     public List<VehicleEntity> getAllVehicles() {
         return vehicleRepository.findAll();
+    }
+
+    public Optional<VehicleEntity> getVehicleById(Integer id) {
+        return vehicleRepository.findById(id);
     }
 
     public void insertOrChangeVehicle(VehicleEntity vehicle) {
