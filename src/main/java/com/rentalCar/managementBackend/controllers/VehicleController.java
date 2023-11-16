@@ -23,7 +23,7 @@ public class VehicleController {
     @Autowired
     private VehicleService vehicleService;
 
-    @Operation(summary = "Lista todos os carros.")
+    @Operation(summary = "Lista todos os veículos.")
     @GetMapping
     public ResponseEntity<List<VehicleEntity>> getAllVehicles() {
         try {
