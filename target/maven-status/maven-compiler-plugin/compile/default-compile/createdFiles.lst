@@ -1,9 +1,11 @@
 com/rentalCar/managementBackend/entitys/VehicleEntity.class
-com/rentalCar/managementBackend/services/VehicleService.class
 com/rentalCar/managementBackend/services/ReservationService.class
 com/rentalCar/managementBackend/controllers/ReservationController.class
 com/rentalCar/managementBackend/ManagementBackendApplication.class
-com/rentalCar/managementBackend/repositorys/ReservationRepository.class
 com/rentalCar/managementBackend/repositorys/VehicleRepository.class
 com/rentalCar/managementBackend/entitys/ReservationEntity.class
 com/rentalCar/managementBackend/controllers/VehicleController.class
+com/rentalCar/managementBackend/dtos/ReservationInsertDto.class
+com/rentalCar/managementBackend/services/VehicleService.class
+com/rentalCar/managementBackend/repositorys/ReservationRepository.class
+com/rentalCar/managementBackend/dtos/ReservationWithVehicleDto.class

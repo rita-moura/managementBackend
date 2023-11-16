@@ -9,8 +9,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.rentalCar.dtos.ReservationInsertDto;
-import com.rentalCar.dtos.ReservationWithVehicleDto;
+import com.rentalCar.managementBackend.dtos.ReservationInsertDto;
+import com.rentalCar.managementBackend.dtos.ReservationWithVehicleDto;
 import com.rentalCar.managementBackend.entitys.ReservationEntity;
 import com.rentalCar.managementBackend.entitys.VehicleEntity;
 import com.rentalCar.managementBackend.services.ReservationService;
@@ -19,6 +19,7 @@ import com.rentalCar.managementBackend.services.VehicleService;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.websocket.server.PathParam;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("reservations")
 public class ReservationController {
@@ -69,10 +70,10 @@ public class ReservationController {
                 if (vehicleEntity.getReserved() == false) {
 
                     vehicleEntity.setReserved(true);
-                    vehicleService.insertOrChangeVehicle(vehicleEntity);
+                    vehicleService.insertOrUpdateVehicle(vehicleEntity);
 
                     reservation.setVehicle(vehicleEntity);
-                    reservationService.insertOrChangeReservation(reservation);
+                    reservationService.insertOrUpdateReservation(reservation);
                     return new ResponseEntity<>("Reserva adicionada com sucesso!!!", HttpStatus.CREATED);
                 } else {
                     return new ResponseEntity<>("Esse veículo já está reservado!", HttpStatus.BAD_REQUEST);
@@ -92,12 +93,11 @@ public class ReservationController {
         try {
             Optional<ReservationEntity> reservation = reservationService.getReservationById(id);
             VehicleEntity vehicle = vehicleService.getVehicleById(reservation.get().getVehicle().getId()).get();
-            System.out.println(vehicle);
 
             reservationService.deleteReservationById(id);
 
             vehicle.setReserved(false);
-            vehicleService.insertOrChangeVehicle(vehicle);
+            vehicleService.insertOrUpdateVehicle(vehicle);
 
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } catch (Exception e) {

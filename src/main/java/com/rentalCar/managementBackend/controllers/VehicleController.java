@@ -39,7 +39,7 @@ public class VehicleController {
     public ResponseEntity<String> insertVehicle(@RequestBody VehicleEntity vehicle) {
         try {
             if(vehicle.getId() == null) {
-                vehicleService.insertOrChangeVehicle(vehicle);
+                vehicleService.insertOrUpdateVehicle(vehicle);
                 return new ResponseEntity<>("Veículo inserido com sucesso!!!", HttpStatus.CREATED);
             } else {
                 return new ResponseEntity<>("Veículo não adicionado.", HttpStatus.BAD_REQUEST);
@@ -52,10 +52,10 @@ public class VehicleController {
 
     @Operation(summary = "Altera o veiculo que corresponde ao id informado.")
     @PutMapping
-    public ResponseEntity<String> cahngeVehicle(@RequestBody VehicleEntity vehicle) {
+    public ResponseEntity<String> updateVehicle(@RequestBody VehicleEntity vehicle) {
         try {
             if(vehicle.getId() != null) {
-                vehicleService.insertOrChangeVehicle(vehicle);
+                vehicleService.insertOrUpdateVehicle(vehicle);
                 return new ResponseEntity<>("Veículo alterado com sucesso!!!", HttpStatus.OK);
             } else {
                 return new ResponseEntity<>("Veículo não alterado.", HttpStatus.BAD_REQUEST);

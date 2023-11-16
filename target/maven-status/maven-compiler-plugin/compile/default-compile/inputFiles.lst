@@ -1,9 +1,11 @@
 /home/rita/Estudo/Bootcamp-IBM-Java-Angular/Back-End/managementBackend/src/main/java/com/rentalCar/managementBackend/services/ReservationService.java
 /home/rita/Estudo/Bootcamp-IBM-Java-Angular/Back-End/managementBackend/src/main/java/com/rentalCar/managementBackend/services/VehicleService.java
 /home/rita/Estudo/Bootcamp-IBM-Java-Angular/Back-End/managementBackend/src/main/java/com/rentalCar/managementBackend/entitys/VehicleEntity.java
+/home/rita/Estudo/Bootcamp-IBM-Java-Angular/Back-End/managementBackend/src/main/java/com/rentalCar/managementBackend/dtos/ReservationWithVehicleDto.java
 /home/rita/Estudo/Bootcamp-IBM-Java-Angular/Back-End/managementBackend/src/main/java/com/rentalCar/managementBackend/controllers/VehicleController.java
 /home/rita/Estudo/Bootcamp-IBM-Java-Angular/Back-End/managementBackend/src/main/java/com/rentalCar/managementBackend/repositorys/VehicleRepository.java
 /home/rita/Estudo/Bootcamp-IBM-Java-Angular/Back-End/managementBackend/src/main/java/com/rentalCar/managementBackend/repositorys/ReservationRepository.java
+/home/rita/Estudo/Bootcamp-IBM-Java-Angular/Back-End/managementBackend/src/main/java/com/rentalCar/managementBackend/dtos/ReservationInsertDto.java
 /home/rita/Estudo/Bootcamp-IBM-Java-Angular/Back-End/managementBackend/src/main/java/com/rentalCar/managementBackend/ManagementBackendApplication.java
 /home/rita/Estudo/Bootcamp-IBM-Java-Angular/Back-End/managementBackend/src/main/java/com/rentalCar/managementBackend/controllers/ReservationController.java
 /home/rita/Estudo/Bootcamp-IBM-Java-Angular/Back-End/managementBackend/src/main/java/com/rentalCar/managementBackend/entitys/ReservationEntity.java
