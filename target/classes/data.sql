@@ -1,4 +1,3 @@
-DROP DATABASE IF EXISTS managementDB;
 CREATE DATABASE managementDB;
 USE managementDB;
 CREATE TABLE vehicles (
@@ -7,7 +6,7 @@ CREATE TABLE vehicles (
     color VARCHAR(255) NOT NULL,
 	model VARCHAR(255) NOT NULL,
     plate VARCHAR(7) UNIQUE NOT NULL,
-    year INT NOT NULL,
+    year YEAR NOT NULL,
     is_reserved BOOLEAN NOT NULL,
     PRIMARY KEY (id)
 );
@@ -20,8 +19,11 @@ CREATE TABLE reservations (
 );
 
 INSERT INTO vehicles (brand, color, model,  plate, year, is_reserved) VALUES 
-('Volkswagen', 'Branca', 'Gol', 'ABC1234', 2020, false),
+('Volkswagen', 'Branco', 'Gol', 'ABC1234', 2020, false),
 ('Hyundai', 'Preto', 'HB20', 'CDE1234', 2021, false),
-('Hyundai', 'Preto', 'HB20', 'CDE1235', 2021, false),
-('Hyundai', 'Preto', 'HB20', 'CDE1254', 2021, false);
-
+('Volkswagen', 'Prata', 'Fox', 'KOL8907', 2023, false),
+('Renault', 'Prata', 'Reanault Kwid', 'NGH1235', 2022, false),
+('Citroën', 'Branco', 'C3', 'DFG5768', 2021, false),
+('Fiat', 'Preto', 'Argo', 'VGH3647', 2022, false),
+('Sandero', 'Preto', 'Stepway', 'BHJ2345', 2019, false),
+('Chevrolet', 'Preto', 'Onix', 'CFG4567', 2020, false);

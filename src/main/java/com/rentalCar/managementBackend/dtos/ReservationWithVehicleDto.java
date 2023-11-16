@@ -1,4 +1,4 @@
-package com.rentalCar.dtos;
+package com.rentalCar.managementBackend.dtos;
 
 import com.rentalCar.managementBackend.entitys.ReservationEntity;
 import com.rentalCar.managementBackend.entitys.VehicleEntity;

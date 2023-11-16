@@ -1,4 +1,4 @@
-package com.rentalCar.dtos;
+package com.rentalCar.managementBackend.dtos;
 
 import lombok.Getter;
 import lombok.Setter;

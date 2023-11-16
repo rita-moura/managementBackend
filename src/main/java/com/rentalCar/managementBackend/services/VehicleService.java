@@ -22,7 +22,7 @@ public class VehicleService {
         return vehicleRepository.findById(id);
     }
 
-    public void insertOrChangeVehicle(VehicleEntity vehicle) {
+    public void insertOrUpdateVehicle(VehicleEntity vehicle) {
         vehicleRepository.save(vehicle);
     }
 

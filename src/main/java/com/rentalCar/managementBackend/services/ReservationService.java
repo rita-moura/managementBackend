@@ -32,7 +32,7 @@ public class ReservationService {
         }
     }
 
-    public void insertOrChangeReservation(ReservationEntity reservation) {
+    public void insertOrUpdateReservation(ReservationEntity reservation) {
         reservationRepository.save(reservation);
     }
 
